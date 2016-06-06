@@ -6,3 +6,5 @@ simpletour 移动端wap页面 微信页面的前端工程
 * jade文件存放在template中
 * html存放在view中,主要用于存放基本的模板页面或是js组件的demo页面.
 * fis-conf.js fis3配置文件,按需增加或是注释代码
+
+### 规范后续添加
