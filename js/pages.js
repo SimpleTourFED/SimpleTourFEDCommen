@@ -25,11 +25,16 @@
         //如果开启路由,则创建history数组
         if(_.option.router){
             var historyArray = [];
-            $(_.option.router).tap(function(e){
+            $(document).on('tap',_.option.router,function(e) {
                 e.preventDefault();
                 e.stopPropagation();
                 _.to($(this).attr('href'));
             });
+            // $(_.option.router).tap(function(e){
+            //     e.preventDefault();
+            //     e.stopPropagation();
+            //     _.to($(this).attr('href'));
+            // });
             $('.page-back').click(function(){
                 _.option.routerFun();
             });
