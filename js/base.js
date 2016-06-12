@@ -154,12 +154,14 @@
     }
 }(Zepto);
 // preloader
-(function($) {
+;(function($) {
     function Preloader() {
-        this.show = function() {
+        this.show = function(content) {
             var preloaderHtml = '<div class="preloader-overlay"></div>' +
                 '<div class="preloader-modal">' +
-                '<span class="preloader"></span>' +
+                '<span class="preloader ' +
+                (content ? '' : 'preloader-no-content') + '"></span>' +
+                (content ? '<span class="preloader-content">' + content + '</span>' : '') +
                 '</div>';
             if ($('.preloader-modal')[0]) return;
             var $preloader = $(preloaderHtml).appendTo('body');

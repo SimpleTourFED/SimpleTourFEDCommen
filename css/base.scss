@@ -492,18 +492,23 @@ header ~ .page-content{
   position: absolute;
   left: 50%;
   top: 45%;
-  padding: 0.4rem;
-  margin-left: -1.25rem;
-  margin-top: -1.25rem;
+  width: 3rem;
+  height: 3rem;
+  margin-left: -1.5rem;
+  margin-top: -1.5rem;
   background: rgba(0, 0, 0, 0.8);
   z-index: 11000;
   border-radius: 0.25rem;
   .preloader {
     display: block;
-    width: 1.7rem;
-    height: 1.7rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    margin: .5rem auto 0;
     -webkit-transform-origin: 50%;
     transform-origin: 50%;
+    &.preloader-no-content {
+      margin: .8rem auto 0;
+    }
     &.preloader-animation{
       -webkit-animation:rotate .7s linear 0s normal none infinite ;
       animation:rotate .7s linear 0s normal none infinite ;
@@ -517,5 +522,13 @@ header ~ .page-content{
       background-position: 50%;
       background-size: 100%;
     }
+  }
+  .preloader-content {
+    display: block;
+    width: 3rem;
+    margin: .2rem auto 0;
+    font-size: .6rem;
+    color: #fff;
+    text-align: center;
   }
 }
