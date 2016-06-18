@@ -17,7 +17,6 @@
     function imgLoader(config){
         this.option = {
             backgroundResources : [], //背景图资源路径数组
-            // imgResources : [], //资源路径数组
             onStart : null, //加载开始回调函数，传入参数total
             onProgress : null, //正在加载回调函数，传入参数currentIndex, total
             onComplete : null //加载完毕回调函数，传入参数total
@@ -79,3 +78,25 @@
     //暴露公共方法
     return imgLoader;
 }));
+/* ============================================
+ ************   使用方法   ************
+ * var loader = new imgLoader({
+            backgroundResources:[
+                "/images/bc@2x.png"
+                ],
+            onStart : function(total){
+ //            $('.bottom-bar').width('8.7rem');
+            },
+            onProgress : function(current,total){
+            },
+            onComplete: function() {
+                setTimeout(function() {
+                $('.progress').addClass('fadeOut');
+            },500);
+            setTimeout(function() {
+                $('.progress').remove();
+            },800);
+    }
+ });
+ loader.start();
+ ============================================== */
